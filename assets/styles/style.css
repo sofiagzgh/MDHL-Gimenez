@@ -41,6 +41,7 @@ header a {
     right: 10px;
     background-color: rgb(68, 114, 196);
 }
+
 header a[href="#"] {
     background-color: rgb(112, 173, 71);
 }
@@ -49,11 +50,12 @@ header a[href="#"] {
 .banner {
     text-align: center;
 }
-.banner > img{
-	width: 99%;
-	height: 300px;
-	object-fit: cover;
-	background-color: rgb(0, 0, 0);
+
+.banner>img {
+    width: 99%;
+    height: 300px;
+    object-fit: cover;
+    background-color: rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
 }
 
@@ -82,7 +84,8 @@ section aside {
     max-width: 85%;
 }
 
-.main-content>article, .main-content>p {
+.main-content>article,
+.main-content>p {
     margin-bottom: 20px;
     margin-top: 10px;
 }
