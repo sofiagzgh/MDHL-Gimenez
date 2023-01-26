@@ -25,6 +25,7 @@ h1 {
 
 nav {
     display: inline;
+    /* PROPIEDAD FLOAT NO SE USA MAS, CAMBIAR POR TRANSFORM */
     float: right;
 }
 
@@ -68,6 +69,7 @@ section h2 {
 
 section aside {
     display: inline-block;
+    /* PROPIEDAD FLOAT NO SE USA MAS, CAMBIAR POR TRANSFORM */
     float: left;
     max-width: 15%;
 }
