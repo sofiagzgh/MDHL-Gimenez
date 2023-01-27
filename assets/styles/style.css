@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 /* CSS Resets */
 * {
     margin: 0;
@@ -10,23 +12,20 @@ a {
 }
 
 body {
-    font-family: "Comic Sans MS", cursive;
+    font-family: 'Comic Neue', cursive;
     margin: 3rem 5rem;
 }
 
 /* Header */
-
 h1 {
     font-style: italic;
     display: inline;
-    font-size: 55px;
-    font-weight: 400;
+    font-size: 3.7rem;
 }
 
 nav {
-    display: inline;
-    /* PROPIEDAD FLOAT NO SE USA MAS, CAMBIAR POR TRANSFORM */
-    float: right;
+    display: inline-block;
+    transform: translate(12%, -145%);
 }
 
 header a {
@@ -36,7 +35,7 @@ header a {
     box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.443);
     color: rgb(255, 255, 255);
     text-align: center;
-    font-size: 22px;
+    font-size: 1.5rem;
     position: relative;
     top: 55px;
     right: 10px;
@@ -65,13 +64,19 @@ section h2 {
     padding: 5px;
     border: 2px solid rgb(0, 0, 0);
     margin-top: -7.5px;
+    font-size: 1.9rem;
+    font-weight: bolder;
+}
+
+.section-container {
+    position: relative;
 }
 
 section aside {
     display: inline-block;
-    /* PROPIEDAD FLOAT NO SE USA MAS, CAMBIAR POR TRANSFORM */
-    float: left;
-    max-width: 15%;
+    position: relative;
+    top: 20px;
+    width: 15%;
 }
 
 .logo {
@@ -81,15 +86,26 @@ section aside {
 
 .main-content {
     display: inline-block;
-    padding: 35px 50px;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    padding: 25px;
     font-size: larger;
-    max-width: 85%;
+    max-width: 78%;
 }
 
 .main-content>article,
 .main-content>p {
-    margin-bottom: 20px;
-    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.event-title {
+    font-style: italic;
+}
+
+.about-title {
+    font-size: 1.8rem;
 }
 
 .main-content>article>p {
