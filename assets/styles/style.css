@@ -38,7 +38,7 @@ header a {
     font-size: 1.5rem;
     position: relative;
     top: 55px;
-    right: 10px;
+    right: 15px;
     background-color: rgb(68, 114, 196);
 }
 
@@ -52,7 +52,7 @@ header a[href="#"] {
 }
 
 .banner>img {
-    width: 99%;
+    width: 99.7%;
     height: 300px;
     object-fit: cover;
     background-color: rgb(0, 0, 0);
@@ -63,7 +63,7 @@ section h2 {
     text-align: center;
     padding: 5px;
     border: 2px solid rgb(0, 0, 0);
-    margin-top: -7.5px;
+    margin-top: -6px;
     font-size: 1.9rem;
     font-weight: bolder;
 }
@@ -100,8 +100,12 @@ section aside {
     padding-top: 10px;
 }
 
-.event-title {
+.event-date {
     font-style: italic;
+}
+
+.event-name {
+    font-size: larger;
 }
 
 .about-title {
