@@ -50,7 +50,7 @@ header {
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.85);
     border: 10px inset rgb(190, 190, 190);
-    z-index: 2;
+    z-index: 1;
 }
 
 h1 {
@@ -148,6 +148,7 @@ section {
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
     }
+
     to {
         -moz-transform: translateX(100%);
         -webkit-transform: translateX(100%);
@@ -223,6 +224,7 @@ section aside {
     text-indent: 20px;
 }
 
+/* Game info page */
 .game-info {
     display: flex;
     flex-direction: row;
@@ -231,10 +233,68 @@ section aside {
     justify-content: space-between;
 }
 
-.game-details {
-    align-self: flex-start;
+/* Table */
+table caption {
+    text-decoration: underline;
+    font-style: italic;
+    padding: 10px;
 }
 
+tbody tr:nth-child(odd) {
+    background-color: rgb(91, 163, 155);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(248, 225, 46);
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #a9a9a984;
+    border: 3px solid rgb(195, 76, 52);
+    text-align: center;
+}
+
+thead th:nth-child(2) {
+    width: 8rem;
+}
+
+thead th:nth-child(3) {
+    width: 9rem;
+}
+
+thead th:nth-child(4) {
+    width: 7rem;
+}
+
+th {
+    background-color: black;
+    color: white;
+    border-bottom: 3px solid rgb(195, 76, 52);
+    border-right: 3px double rgb(195, 76, 52);
+    padding: 5px;
+}
+
+td {
+    padding: 5px 10px;
+    border-bottom: 3px dotted black;
+}
+
+/* Game details */
+.game-details {
+    align-self: center;
+    flex-wrap: wrap;
+    width: 35%;
+    padding: 10px;
+    color: rgb(87, 87, 87);
+}
+
+.game-details .detail-title {
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+/* Footer */
 footer {
     width: 100%;
     height: 6rem;
