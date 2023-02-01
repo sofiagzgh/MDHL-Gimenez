@@ -101,7 +101,7 @@ header a[href="#"] {
 /* SECTIONS */
 section {
     margin-top: 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 3rem;
 }
 
 .banner {
@@ -200,7 +200,8 @@ aside>img {
 
 aside>img:hover {
     transform: scaleX(-1);
-  }
+    box-shadow: rgb(195, 76, 52) 0px 0px 0px 3px, rgb(0, 0, 0) 0px 0px 0px 6px;
+}
 
 .main-content {
     display: inline-block;
@@ -230,7 +231,8 @@ aside>img:hover {
     font-size: larger;
 }
 
-.about-title, .game-info  h3 {
+.about-title,
+.game-info h3 {
     font-size: 1.8rem;
 }
 
@@ -238,12 +240,12 @@ aside>img:hover {
     text-indent: 20px;
 }
 
-/* Game info page */
+/* GAME INFO PAGE */
 .game-info {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -297,16 +299,24 @@ td {
 
 /* Game details */
 .game-details {
-    align-self: center;
-    flex-wrap: wrap;
-    width: 35%;
-    padding: 10px;
+    width: 36%;
     color: rgb(87, 87, 87);
+    align-self: center;
 }
 
-.game-details .detail-title {
+.details1,
+.details2 {
+    background-color: rgb(255, 255, 255, 0.58);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 10PX;
+    backdrop-filter: blur(5px);
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+
+.detail-title {
     font-weight: 600;
-    padding-top: 20px;
+    padding: 5px 0;
 }
 
 /* Footer */
