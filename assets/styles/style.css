@@ -163,6 +163,7 @@ section {
     align-content: flex-start;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     margin: 2rem;
 }
 
@@ -170,6 +171,7 @@ section aside {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .logo {
@@ -187,6 +189,18 @@ section aside {
     /* Safari 3-8 */
     transform: scale(1.5);
 }
+
+aside>img {
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: rgb(248, 225, 46) 0px 0px 0px 3px, rgb(0, 0, 0) 0px 0px 0px 6px;
+}
+
+aside>img:hover {
+    transform: scaleX(-1);
+  }
 
 .main-content {
     display: inline-block;
@@ -216,7 +230,7 @@ section aside {
     font-size: larger;
 }
 
-.about-title {
+.about-title, .game-info  h3 {
     font-size: 1.8rem;
 }
 
@@ -273,6 +287,7 @@ th {
     border-bottom: 3px solid rgb(195, 76, 52);
     border-right: 3px double rgb(195, 76, 52);
     padding: 5px;
+    font-family: "Scoreboard";
 }
 
 td {
