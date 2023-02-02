@@ -41,7 +41,7 @@ body::after {
 
 /* HEADER */
 header {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
     display: flex;
@@ -232,8 +232,9 @@ aside>img:hover {
 }
 
 .about-title,
-.game-info h3 {
+.game-info h3, .rules-title {
     font-size: 1.8rem;
+    padding-bottom: 10px;
 }
 
 .main-content>article>p {
@@ -281,6 +282,7 @@ thead th:nth-child(3) {
 
 thead th:nth-child(4) {
     width: 7rem;
+    border-right: 3px solid rgb(195, 76, 52);
 }
 
 th {
@@ -317,6 +319,24 @@ td {
 .detail-title {
     font-weight: 600;
     padding: 5px 0;
+}
+
+/* RULES PAGE */
+article ol {
+    margin-left: 1rem;
+}
+
+article ol li {
+    margin-top: 1rem;
+    text-indent: 1rem;
+}
+
+article ol p {
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+article ul {
+    margin: 1rem 3rem;
 }
 
 /* Footer */
