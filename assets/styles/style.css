@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: "Scoreboard";
+    src: url("../fonts/scoreboard.ttf") format("truetype");
+}
+
+/* CSS Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+main {
+    margin: 2rem 3rem;
+}
+
+/* BACKGROUND IMAGE */
+body::after {
+    content: "";
+    background: url("/assets/images/design1_image1.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 10px inset rgb(190, 190, 190);
+    z-index: 1;
+}
+
+h1 {
+    min-width: 55%;
+    align-self: flex-start;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: rgb(248, 225, 46);
+    border-right: 2px inset rgb(255, 255, 255);
+    padding: 1rem;
+    text-shadow: -1px 1px 1px black, -2px 2px 2px rgb(195, 76, 52), 0 0 10px rgb(91, 163, 155);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+nav {
+    padding: 1rem 0px;
+    height: max-content;
+    align-self: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+header a {
+    padding: 2px 12px;
+    margin: 3px 5px;
+    border: 2px solid rgb(195, 76, 52);
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.443);
+    color: rgb(211, 211, 211);
+    text-align: center;
+    font-family: "Scoreboard";
+    font-size: 1.3rem;
+    background-color: rgb(45, 45, 45);
+}
+
+header a:hover {
+    transform: scale(1.1);
+}
+
+header a[href="#"] {
+    color: rgb(248, 225, 46);
+    border: 3px solid rgb(91, 163, 155);
+    background-color: rgb(0, 0, 0);
+}
+
+/* SECTIONS */
+section {
+    margin-top: 10rem;
+    padding-bottom: 3rem;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner>img {
+    width: 99.7%;
+    height: 300px;
+    object-fit: cover;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+/* Section animated title */
+.h2-container {
+    padding: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: -6px;
+    font-size: 1.9rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+}
+
+.h2-container h2 {
+    text-align: right;
+    font-weight: bolder;
+    font-family: "Scoreboard";
+    color: rgb(255, 165, 0);
+    /* Animation */
+    /* Starting position */
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    /* Apply animation */
+    -moz-animation: scroll-right 10s linear infinite;
+    -webkit-animation: scroll-right 10s linear infinite;
+    animation: scroll-right 10s linear infinite;
+}
+
+@keyframes scroll-right {
+    from {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    to {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+/* PRINCIPAL CONTENT */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 2rem;
+}
+
+section aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    top: 8rem;
+    z-index: 0;
+}
+
+.logo {
+    width: 150px;
+    margin: 20px 5px;
+    /* Animation */
+    transition: transform .2s;
+    filter: drop-shadow(2px 4px 8px rgb(255, 255, 255));
+}
+
+.logo:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.5);
+}
+
+aside>img {
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 10% / 50%;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: rgb(248, 225, 46) 0px 0px 0px 3px, rgb(0, 0, 0) 0px 0px 0px 6px;
+}
+
+aside>img:hover {
+    transform: scaleX(-1);
+    box-shadow: rgb(195, 76, 52) 0px 0px 0px 3px, rgb(0, 0, 0) 0px 0px 0px 6px;
+}
+
+.main-content {
+    display: inline-block;
+    padding: 25px;
+    margin-top: 1rem;
+    font-size: larger;
+    width: 80%;
+    background-color: rgba(181, 217, 243, 0.58);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.main-content>article,
+.main-content>p {
+    padding: 10px 0px 20px 30px;
+    border-bottom: 5px dotted rgb(119, 136, 153);
+    border-left: 10px ridge rgb(119, 136, 153);
+}
+
+.event-date {
+    font-style: italic;
+}
+
+.event-name {
+    font-size: larger;
+}
+
+.about-title,
+.game-info h3, .rules-title {
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+
+.main-content>article>p {
+    text-indent: 20px;
+}
+
+/* GAME INFO PAGE */
+.game-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Table */
+table caption {
+    text-decoration: underline;
+    font-style: italic;
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(91, 163, 155);
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(248, 225, 46);
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #a9a9a984;
+    border: 3px solid rgb(195, 76, 52);
+    text-align: center;
+}
+
+thead th:nth-child(2) {
+    width: 8rem;
+}
+
+thead th:nth-child(3) {
+    width: 9rem;
+}
+
+thead th:nth-child(4) {
+    width: 7rem;
+    border-right: 3px solid rgb(195, 76, 52);
+}
+
+th {
+    background-color: black;
+    color: white;
+    border-bottom: 3px solid rgb(195, 76, 52);
+    border-right: 3px double rgb(195, 76, 52);
+    padding: 5px;
+    font-family: "Scoreboard";
+}
+
+td {
+    padding: 5px 10px;
+    border-bottom: 3px dotted black;
+}
+
+/* Game details */
+.game-details {
+    width: 36%;
+    color: rgb(87, 87, 87);
+    align-self: center;
+}
+
+.details1,
+.details2 {
+    background-color: rgb(255, 255, 255, 0.58);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 10PX;
+    backdrop-filter: blur(5px);
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+
+.detail-title {
+    font-weight: 600;
+    padding: 10px 0 5px 0;
+}
+
+
+
+/* RULES PAGE */
+article ol {
+    margin-left: 1rem;
+}
+
+article ol li {
+    margin-top: 1rem;
+    text-indent: 1rem;
+}
+
+article ol p {
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+article ul {
+    margin: 1rem 3rem;
+    list-style-type: circle;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.664);
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 10px inset rgb(190, 190, 190);
+}
+
+footer a {
+    color: white;
+}
