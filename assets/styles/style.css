@@ -211,7 +211,7 @@ aside>img:hover {
     padding: 25px;
     margin-top: 1rem;
     font-size: larger;
-    width: 80%;
+    width: 79%;
     background-color: rgba(181, 217, 243, 0.58);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
@@ -236,7 +236,8 @@ aside>img:hover {
 }
 
 .about-title,
-.game-info h3, .rules-title {
+.game-info h3,
+.rules-title {
     font-size: 1.8rem;
     padding-bottom: 10px;
 }
@@ -325,7 +326,45 @@ td {
     padding: 10px 0 5px 0;
 }
 
+/* Locations */
+.locations {
+    width: 100%;
+    text-align: center;
+    margin-top: -1rem;
+}
 
+.locations>.game-info {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.locations h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: rgb(87, 87, 87);
+    border-bottom: 5px dotted rgb(119, 136, 153);
+    padding-bottom: 5px;
+    margin: 5px 50px 15px 50px;
+}
+
+.location {
+    margin: 1rem 0.5rem;
+    padding: 15px 20px;
+    border-radius: 10%;
+    background-color: rgb(255, 255, 255, 0.58);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.location h3,
+.location p {
+    padding-bottom: 10px;
+}
+
+.game-info iframe {
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+}
 
 /* RULES PAGE */
 article ol {
@@ -344,6 +383,143 @@ article ol p {
 article ul {
     margin: 1rem 3rem;
     list-style-type: circle;
+}
+
+/* REGISTRATION PAGE */
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+fieldset {
+    margin: 10px 20px;
+    padding: 20px;
+}
+
+fieldset.full-width {
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.full-width>div {
+    margin: 3px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(248, 225, 46, 0.5);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.registration input[type=text], input[type=date] {
+    padding: 10px 20px;
+    margin: 5px 0;
+    display: block;
+    border: 2px solid rgb(195, 76, 52);
+    background-color: rgba(248, 225, 46, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+.registration div>label {
+    display: block;
+    color: rgb(195, 76, 52);
+}
+
+.registration input[type=radio] {
+    margin: 0 3px 0 15px;
+}
+
+.registration input[type=text]:focus {
+    background-color: white;
+}
+
+.registration select {
+    background-color: rgba(248, 225, 46, 0.5);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+fieldset.half-width {
+    max-width: 40%;
+}
+
+/* Buttons */
+button {
+    font-family: "Scoreboard";
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-align: center;
+    font-size: 28px;
+    padding: 5px 20px;
+    margin: 10px;
+    width: 200px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button[type=reset] {
+    background-color: black;
+    width: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+button[type=reset]:after {
+    content: "";
+    background: white;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button[type=reset]:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+button[type=submit] {
+    background-color: rgb(91, 163, 155);
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 /* Footer */
