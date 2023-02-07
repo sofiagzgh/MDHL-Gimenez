@@ -399,18 +399,23 @@ fieldset {
     padding: 20px;
 }
 
+legend {
+    font-size: 1.3rem;
+    text-shadow: -1px 1px 2px white;
+}
+
 fieldset.full-width {
     max-width: 90%;
+    background-color: rgba(248, 225, 46, 0.5);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.full-width>div {
-    margin: 3px;
-    padding: 10px;
+fieldset.full-width>div {
+    margin: 5px 3px;
     border-radius: 10px;
-    background-color: rgba(248, 225, 46, 0.5);
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -418,7 +423,28 @@ fieldset.full-width {
     flex-direction: row;
 }
 
-.registration input[type=text], input[type=date] {
+fieldset.full-width div>label {
+    display: block;
+    color: rgb(195, 76, 52);
+    margin: 5px 20px;
+}
+
+fieldset.half-width {
+    max-width: 40%;
+    background-color: rgba(248, 225, 46, 0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+fieldset.half-width div, fieldset.half-width label, .uniforms {
+    color: rgb(195, 76, 52);
+}
+
+.registration input[type=text], .registration input[type=date] {
     padding: 10px 20px;
     margin: 5px 0;
     display: block;
@@ -428,27 +454,28 @@ fieldset.full-width {
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
-.registration div>label {
-    display: block;
-    color: rgb(195, 76, 52);
-}
-
 .registration input[type=radio] {
-    margin: 0 3px 0 15px;
+    margin: 0 3px 0 10px;
 }
 
 .registration input[type=text]:focus {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.628);
 }
 
 .registration select {
     background-color: rgba(248, 225, 46, 0.5);
+    margin: 5px 0;
     padding: 10px 20px;
     border-radius: 4px;
+    display: block;
+    border: 2px solid rgb(195, 76, 52);
 }
 
-fieldset.half-width {
-    max-width: 40%;
+.registration p {
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+    line-height: 1.4;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Buttons */

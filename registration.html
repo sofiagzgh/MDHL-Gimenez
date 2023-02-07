@@ -42,7 +42,7 @@
                 <div class="main-content registration">
                     <form action="show_data.html" method="get">
                         <fieldset class="full-width">
-                            <legend>Main information</legend>
+                            <legend> Main information</legend>
                             <div>
                                 <label>Player's First Name:
                                     <input type="text" id="fname" name="fname" required>
@@ -72,7 +72,7 @@
                             </div>
 
                             <div>
-                                <label>Birth Date (dd/mm/yyyy):
+                                <label>Birth Date:
                                     <input type="date" id="bdate" name="bdate" required>
                                 </label>
 
@@ -96,7 +96,7 @@
                         </fieldset>
 
                         <fieldset class="half-width">
-                            <legend>Which elementary school do you live near?</legend>
+                            <legend> Which elementary school do you live near?</legend>
                             <label>Closest School:
                                 <select name="school" required>
                                     <option value="" selected disabled>-- Select a School --</option>
@@ -108,29 +108,40 @@
                                     <option value="south"> South Elementary</option>
                                 </select>
                             </label>
+                            <a href="game_info.html#locations">Go to maps »</a>
                         </fieldset>
 
                         <fieldset class="half-width">
-                            <legend>What position(s) do you normally play? (check all that apply)</legend>
-                            <input type="checkbox" name="position" value="forward"> Forward
-                            <input type="checkbox" name="position" value="midfield"> Midfield
-                            <input type="checkbox" name="position" value="defense"> Defense
-                            <input type="checkbox" name="position" value="goalkeeper"> Goalkeeper
+                            <legend> What position(s) do you normally play? (check all that apply)</legend>
+                            <div>
+                                <input type="checkbox" name="position" value="forward"> Forward
+                            </div>
+                            <div>
+                                <input type="checkbox" name="position" value="midfield"> Midfield
+                            </div>
+                            <div>
+                                <input type="checkbox" name="position" value="defense"> Defense
+                            </div>
+                            <div>
+                                <input type="checkbox" name="position" value="goalkeeper"> Goalkeeper
+                            </div>
                         </fieldset>
 
                         <fieldset class="full-width">
                             <legend>Uniform Size</legend>
-                            <input type="radio" name="usize" value="ys" required> Youth Small
-                            <input type="radio" name="usize" value="ym"> Youth Medium
-                            <input type="radio" name="usize" value="yl"> Youth Large
-                            <input type="radio" name="usize" value="s"> Small
-                            <input type="radio" name="usize" value="m"> Medium
-                            <input type="radio" name="usize" value="l"> Large
-                            <input type="radio" name="usize" value="xl"> Extra-large
+                            <div class="uniforms">
+                                <input type="radio" name="usize" value="ys" required> Youth Small
+                                <input type="radio" name="usize" value="ym"> Youth Medium
+                                <input type="radio" name="usize" value="yl"> Youth Large
+                                <input type="radio" name="usize" value="s"> Small
+                                <input type="radio" name="usize" value="m"> Medium
+                                <input type="radio" name="usize" value="l"> Large
+                                <input type="radio" name="usize" value="xl"> Extra-large
+                            </div>
                         </fieldset>
 
                         <fieldset class="full-width">
-                            <legend>Permission to Play</legend>
+                            <legend> Permission to Play</legend>
                             <p>I, the parent or guardian of the minor registrant, agree that the registrant and I
                                 will abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the
                                 possibility of physical injury associated with hockey and in consideration for the
@@ -147,14 +158,15 @@
                                 entering my name below, I
                                 also acknowledge that I have read the cancellation policy and agree to its terms.
                             </p>
+                            <div>
+                                <label>Parent/Guardian Name:
+                                    <input type="text" name="parent-guardian" required>
+                                </label>
 
-                            <label>Parent/Guardian Name:
-                                <input type="text" name="parent-guardian" required>
-                            </label>
-
-                            <label>Date:
-                                <input type="date" id="date" name="date" required>
-                            </label>
+                                <label>Date:
+                                    <input type="date" id="date" name="date" required>
+                                </label>
+                            </div>
                         </fieldset>
 
                         <button type="reset">Reset</button>
