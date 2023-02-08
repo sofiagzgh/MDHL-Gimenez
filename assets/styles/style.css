@@ -18,10 +18,13 @@ a {
 
 body {
     font-family: 'Oswald', sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
 main {
-    margin: 2rem 3rem;
+    margin: 2rem 3rem 0rem 3rem;
+    padding-bottom: 6rem;
 }
 
 /* BACKGROUND IMAGE */
@@ -565,6 +568,8 @@ footer {
     color: rgba(255, 255, 255, 0.664);
     background-color: rgba(0, 0, 0, 0.85);
     border: 10px inset rgb(190, 190, 190);
+    position: absolute;
+    bottom: 0;
 }
 
 footer a {
